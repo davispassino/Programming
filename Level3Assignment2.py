@@ -1,6 +1,12 @@
+#Davis Passino
+
+#Here is the beginning for the game loop
+
 play_again = "y"
 
 while play_again == "y":
+
+#Here is where the code creates a random number and asks you to guess
 
     import random
     number = random.randint(1, 100)
@@ -8,6 +14,8 @@ while play_again == "y":
 
     guess=int(input("Enter your guess: "))
     guess_count=1
+
+    #Here is where the game evalutes each guess and gives feedback on the guess
 
     while (guess != number):
 
@@ -23,6 +31,8 @@ while play_again == "y":
             guess_count +=1
 
         guess= int(input("Guess again: "))
+
+    #Here is the end of the game and the overall game feeback
 
     print("Correct!")
 
@@ -40,5 +50,7 @@ while play_again == "y":
 
     elif guess_count >= 9:
         print("You need to lock in next time...")
+
+    #Here is where it asks if you want to play again. It either loops or exits.
 
     play_again = input("Would you like to play again? (y/n) ")
